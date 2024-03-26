@@ -1,0 +1,18 @@
+@import './styles/_main';
+
+.app {
+    margin: 20px auto 20px auto;
+    max-width: 720px;
+
+    header {
+        .title {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .app {
+        padding: 0 10px;
+    }
+}

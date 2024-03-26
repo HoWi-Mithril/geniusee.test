@@ -1,0 +1,53 @@
+@import '../../styles/_variables';
+
+.form-wrapper {
+    background-color: $bg-color-main-content;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 40px;
+
+    .section {
+        &-title {
+            background-color: $bg-color-main-content;
+            margin-bottom: 10px;
+            position: sticky;
+            top: 30px;
+            z-index: 2;
+        }
+    }
+
+    .section ~ .section {
+        margin-top: 40px;
+    }
+
+    .form-button {
+        cursor: pointer;
+        background-color: $bg-color-button;
+        border-radius: 4px;
+
+        font-size: 16px;
+        font-weight: bold;
+
+        margin-top: 30px;
+        padding: 20px 0;
+        width: 100%;
+
+        transition: 0.25s;
+
+        &:active {
+            background-color: $bg-color;
+            color: $bg-color-main-content;
+        }
+
+        &[disabled] {
+            background: $bg-color-button-disabled;
+            color: $text-color-button-disabled;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 20px;
+    }
+}
